@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block page_content %}
+<div class = 'container' >
+    <h1>Thanks {{user.username}}!</h1>
+    <h2> Your downtime cost is estimated at a value of {{downtime_cost}} per hour</h2>
+
+
+
+
+      <li><a href="/calculator">Enter New Data</a></li>
+  </div>
+{% endblock %}

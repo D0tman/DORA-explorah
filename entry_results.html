@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block page_content %}
+<div class = 'container'>
+    <h1>Thanks {{user.username}}!</h1>
+    <h2> You entered a value of {{value}} for the metric {{metric}}</h2>
+
+<div> {{wtf.quick_form(form)}}</div>
+
+
+      <li><a href="/entry">Enter New Data</a></li>
+</div>
+{% endblock %}

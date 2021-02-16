@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block page_content %}
+
+<div> {{wtf.quick_form(form)}}</div>
+
+    <p>Cost of Downtime (per hour) = Lost Revenue + Lost Productivity + Recovery Costs + Intangible Costs</p>
+    <ul>
+      <li>Lost Revenue = Revenue/hr x downtime(hrs) x uptime(%)</li>
+      <li>Lost Productivity = Employee Salary/hr x Utilization % x Number of employees (with same Utilization %)</li>
+      <li>Recorvery costs can include:  Repair services, Replacement parts, Lost data recovery, Other costs due to loss of data</li>
+      <li>These are the costs that can sting the most for the long-term. These occur when downtime damages your reputation or your brand.</li>
+
+    </ul>
+ <p><a href="/">Home</a></p>
+{% endblock %}

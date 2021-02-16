@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block page_content %}
+
+<form method = "post" role="form">
+  {{form.hidden_tag()}}
+  {{wtf.form_errors(form,hiddens="only")}}
+
+<div class = 'container' >
+	<div class = 'row'>
+		<div class = 'col-md-4'>
+			<div>{{ wtf.form_field(form.revhour)}} </div>
+    </div>
+    <div class = 'col-md-4'>
+        <div>{{ wtf.form_field(form.downtime)}} </div>
+    </div>
+    <div class = 'col-md-4'>
+        <div> {{ wtf.form_field(form.uptimep)}} </div>
+    </div>
+	</div>
+
+
+  <div class = 'row'>
+    <div class = 'col-md-4'>
+      <div> {{ wtf.form_field(form.salaryhour)}} </div>
+    </div>
+    <div class = 'col-md-4'>
+      <div> {{ wtf.form_field(form.utilization)}} </div>
+    </div>
+    <div class = 'col-md-4'>
+      <div> {{ wtf.form_field(form.numemployees)}} </div>
+    </div>
+  </div>
+      <div> {{ wtf.form_field(form.recoverycost)}} </div>
+      <div> {{ wtf.form_field(form.intangiblecost)}} </div>
+</div>
+
+<div class = 'container'>
+<div> {{ wtf.form_field(form.calcsubmit)}} </div>
+
+    <p>Cost of Downtime (per hour) = Lost Revenue + Lost Productivity + Recovery Costs + Intangible Costs</p>
+    <ul>
+      <li>Lost Revenue = Revenue/hr x downtime(hrs) x uptime(%)</li>
+      <li>Lost Productivity = Employee Salary/hr x Utilization % x Number of employees (with same Utilization %)</li>
+      <li>Recorvery costs can include:  Repair services, Replacement parts, Lost data recovery, Other costs due to loss of data</li>
+      <li>These are the costs that can sting the most for the long-term. These occur when downtime damages your reputation or your brand.</li>
+
+    </ul>
+ <p><a href="/">Home</a></p>
+
+{% endblock %}

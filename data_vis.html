@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block page_content %}
+<div class = 'container'>
+<div>{{wtf.quick_form(form)}} </div>
+
+
+    <div>This page will display data visualizations of relevant client metrics:</div>
+    <ul>
+      <li>Histograms of release frequency, MTTR, and percentage of rollbacks</li>
+    </ul>
+ <p><a href="/">Home</a></p>
+</div>
+{% endblock %}
